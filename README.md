@@ -21,10 +21,10 @@ Este é um projeto simples em Go que cria uma API simples. A sua publicação é
 ## Executando o projeto no cluster kubernetes com minikube
     
 ### Certifique-se que você possua um namespace chamado go
-    create namespace go
+    kubectl create namespace go
     
 ### Instale o chart
-    cd charts && \ helm upgrade --install -f Values.yaml -n go go-http-server .
+    cd charts && helm upgrade --install -f Values.yaml -n go go-http-server .
 
 Caso necessário, faça um port-forward da aplicação 
     
