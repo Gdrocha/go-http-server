@@ -9,19 +9,23 @@ Este é um projeto simples em Go que cria uma API simples. A sua publicação é
 
 # Instalação
 
-### Clone este repositório:
+## Clone este repositório:
 
-    git clone https://github.com/gdrocha/simple-api-go.git
-    cd simple-api-go
+    git clone https://github.com/gdrocha/go-http-server.git
+    cd go-http-server
 
-### Instale as dependências (se necessário):
+## Executando o projeto localmente
+    go mod download
+    go run src/main.go
 
-    go mod tidy
+## Executando o projeto no cluster kubernetes com minikube
+    
+### Certifique-se que você possua um namespace chamado go
+    create namespace go
+    
+### Instale o chart
+    cd charts && \ helm upgrade --install -f Values.yaml -n go go-http-server .
 
-### Executando o projeto
-
-#### Execute a aplicação:
-
-    go run main.go
-
-    Acesse a API em http://localhost:8081/
+Caso necessário, faça um port-forward da aplicação 
+    
+    kubectl port-forward service/go-http-server -n go 8081:8081

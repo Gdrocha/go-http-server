@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"go-http-server/handlers"
+	"go-http-server/src/handlers"
 	"net/http"
 )
 

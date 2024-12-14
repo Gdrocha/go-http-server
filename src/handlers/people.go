@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"go-http-server/models"
+	"go-http-server/src/models"
 	"net/http"
 )
 

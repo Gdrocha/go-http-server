@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-http-server/routes"
+	"go-http-server/src/routes"
 	"net/http"
 )
 

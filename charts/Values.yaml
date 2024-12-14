@@ -1,0 +1,8 @@
+image:
+  repository: gdrocha
+  name: go-http-server
+  tag: latest
+
+server:
+  port: 8081
+  name: go-http-server
